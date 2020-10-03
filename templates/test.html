@@ -1,0 +1,496 @@
+<!doctype html>  
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Online HTML Editor - 𝗛𝗧𝗠𝗟-𝗢𝗻𝗹𝗶𝗻𝗲.𝗰𝗼𝗺</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="The best real-time online HTML editor software kit with dynamic instant live visual preview and inline WYSIWYG editor using CKEditor and markup clean-up feature" />
+	<meta name="keywords" content="html,online,editor" />
+	<meta property="og:title" content="Online HTML Editor" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="The best real-time online HTML editor software kit with dynamic instant live visual preview and inline WYSIWYG editor using CKEditor and markup clean-up feature" />
+	<meta property="og:url" content="https://html-online.com/editor" />
+	<meta property="og:image" content="https://html-online.com/editor/images/witch.jpg" />
+	<link rel="canonical" href="https://html-online.com/editor/" />
+	<link rel="stylesheet" type="text/css" href="/editor/intro-js/introjs.css" />
+	<link rel="stylesheet" href="/editor/codemirror-4.6/doc/docs.css">
+	<link rel="stylesheet" href="/editor/codemirror-4.6/lib/codemirror.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<script src="/editor/jscolor/jscolor.js"></script>
+	<script src="/editor/tinymce4_6_5/tinymce.gzip.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="/editor/codemirror-4.6/lib/codemirror.js"></script>
+	<script src="/editor/codemirror-4.6/addon/fold/xml-fold.js"></script>
+	<script src="/editor/codemirror-4.6/addon/edit/matchtags.js"></script>
+	<script src="/editor/codemirror-4.6/addon/selection/active-line.js"></script>
+	<script src="/editor/codemirror-4.6/addon/edit/closetag.js"></script>
+	<script src="/editor/codemirror-4.6/mode/xml/xml.js"></script>
+	<script src="/editor/intro-js/intro.js"></script>
+	<link rel="stylesheet" type="text/css" href="/editor/html-editor.css?v=2019201000000" />
+	<script src="/editor/html-editor.js?v=2019201000000"></script>
+	<script src="/editor/linketado.js?v=2019201000000"></script>
+</head>
+<body onload="bodyOnload();" class="htmlpage">
+<div id="wrapall">
+	<div id="popupUzenetBox">
+		<div id="popupUzenet">Online HTML Editor</div>
+		<div onclick="document.getElementById('popupUzenetBox').style.display='none';" class="okButton">OK</div>
+	</div>
+	<div id="logContainer"></div>
+	<header>
+		<nav>
+			<div id="tabContainer">
+				<div class="tabz">
+					<a  href="https://html-css-js.com/html/" class="html">HTML</a><a href="https://html-css-js.com/css/" class="css">CSS</a><a href="https://html-css-js.com/js/" class="js">JS</a>
+				</div>
+				<div class="subtabz">
+					<ul class="html">
+						<li><a class="activeMenuItem" href="/editor/">Editor</a></li>
+						<li><a href="https://html-css-js.com/html/tags/">Tags</a></li>
+						<li><a href="https://htmlcheatsheet.com/">Cheat Sheet</a></li>
+						<li><a href="https://textfancy.com/characters/">Characters</a></li>
+						<li><a href="https://html-css-js.com/html/generator/">Generators</a></li>
+						<li><a href="https://html5-templates.com/">Templates</a></li>
+						<li><a href="https://html-online.com/articles/category/html/">Blog</a></li>
+						<li><a href="https://html-css-js.com/html/links/">Links</a></li>
+					</ul>
+					<ul class="css">
+						<li><a href="https://html-css-js.com/css/editor/">Editor</a></li>
+						<li><a href="https://htmlcheatsheet.com/css/">Cheat Sheet</a></li>
+						<li><a href="https://html-css-js.com/css/generator/">Generators</a></li>
+						<li><a href="https://html-online.com/articles/category/css/">Blog</a></li>
+						<li><a href="https://html-css-js.com/css/links/">Links</a></li>
+					</ul>			
+					<ul class="js">
+						<li><a href="https://html-css-js.com/js/editor/">Editor</a></li>
+						<li><a href="https://html-css-js.com/js/compressor/">Compressor</a></li>
+						<li><a href="https://htmlcheatsheet.com/js/">Cheat Sheet</a></li>
+						<li><a href="https://htmlcheatsheet.com/jquery/">jQuery</a></li>
+						<li><a href="https://html-online.com/articles/category/javascript/">Blog</a></li>
+						<li><a href="https://html-css-js.com/js/links/">Links</a></li>
+					</ul>
+				</div>
+			</div>
+			<a href="/" title="HTML Online" class="homeMenu">HTML-Online.com</a>
+		</nav>
+		<div class="headerLine">
+			<div class="centerHeader">
+				<div class="navContainer">
+					<div id="likeContainer">
+						<span>Change language:</span>
+						<a rel="external nofollow" href="https://htmled.it/or/" title="Programa para editar HTML" class="flag flag-es"></a>
+						<a rel="external nofollow" href="https://htmled.it/editor-html/" title="Programa para edição de HTML" class="flag flag-pt"></a>
+						<a rel="external nofollow" href="https://htmled.it/redaktor/" title="Редактор HTML " class="flag flag-ru"></a>
+						<a rel="external nofollow" href="https://htmled.it/pulitore-convertitore/" title="Programma per la modifica di HTML" class="flag flag-it"></a>
+						<a rel="external nofollow" href="https://htmled.it/ar/" title="محرر HTML" class="flag flag-sa"></a>
+						<a rel="external nofollow" href="https://htmled.it/editeur-html/" title="Éditeur HTML" class="flag flag-fr"></a>
+						<a rel="external nofollow" href="https://htmled.it/editoru/" title="HTML Editörü" class="flag flag-tr"></a>
+						<a rel="external nofollow" href="https://htmled.it/edytor-html/" title="Edytor HTML" class="flag flag-pl"></a>
+						<a rel="external nofollow" href="https://htmled.it/html-szerkeszto/" title="HTML szerkesztő program" class="flag flag-hu"></a>
+						<a rel="external nofollow" href="https://htmled.it/program-pentru-editare-html/" title="Program editare haștemele" class="flag flag-ro"></a>
+						<a rel="external nofollow" href="https://htmled.it/html-herausgeber/" title="HTML herausgeber" class="flag flag-de"></a>
+					</div>					
+					<nav>
+						<ul class="mainNavi">
+							<li><a href="/" class="highlightedItem">HTML</a></li>
+							<li><a href="https://html-css-js.com/css/editor/" target="_blank" title="CSS Cleaner">CSS</a></li>
+							<li style="margin-right: 15px;"><a href="https://html-css-js.com/js/editor/" target="_blank" title="JavaScript Cleaner">JS</a></li>
+							<li><a onclick="startFirstTour();">Quick Tour</a></li>
+							<li><a href="/#features">Features</a></li>
+							<li><a href="/articles/">Articles</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="rightHeader">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Fixed 320w X 90h -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:90px"
+     data-ad-client="ca-pub-9728962508602593"
+     data-ad-slot="2107897247"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+				</div>
+				<div class="templateSzorny">
+					<a href="https://www.templatemonster.com/website-templates.php?aff=html-online&utm_campaign=blog_site_html-online&utm_source=header_250x125&utm_medium=websitetemplates" onClick="_gaq.push(['_trackEvent', 'SzornyKlick' , 'TemplateMonsterClick']);" target="_blank" rel="external"><img src="/editor/images/templates2.jpg" alt="html templates" /></a>
+				</div>
+				<div class="clearboth">
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="pagewrap">		
+		<div class="programIsThinking">
+		</div>
+		<div class="szekcio1" data-step="1" data-intro="Use to visual editor to compose your content or paste here a Word document." data-position='right'>
+			<form method="post">
+				<textarea id="elm1" name="elm1"></textarea>
+			</form>
+		</div>
+		<div class="szekcio2">
+		</div>
+		<div class="szekcio3">			
+			<div class="commandBoxes">
+				<div class="multiButton">
+					<div title="Adjust cleaning options" class="cleanOptionsToggle" data-step="3" data-intro="Set up your cleaning preferences here."  data-position='left'>
+					</div>			
+					<div class="convertButton performCleaning" data-step="4" data-intro="Perform source cleaning."  data-position='left'>
+						<span id="cleanButtonText">Clean</span><div id="onTheConvertButton"></div>
+					</div>
+				</div>
+				<div class="additionalSourceOptions">
+					<div>
+						<a title="Color Picker" class="colorPickerOpen"> </a>
+					</div>
+					<div>
+						<a title="Automatic scroll" class="scrollLeftRight"> </a>
+					</div>
+					<div>
+						<a title="Lorem-Ipsum generator" class="lipszum"> </a>
+					</div>
+					<div>
+						<a title="Find and Replace tool" class="findundreplace"> </a>
+					</div>
+					<div>
+						<a title="Compress HTML" class="compressHTML"> </a>
+					</div>
+					<div>
+						<a title="Load Bootstrap CSS" class="useBootstrapCss"> </a>
+					</div>
+					<div class="textBiggerSmaller">
+						<a title="Smaller Font" class="sourceSmallerFont">-</a>
+						<a title="Normal Font"><span>a</span><span>a</span><span>a</span></a>
+						<a title="Bigger Font" class="sourceBiggerFont">+</a>
+					</div>
+				</div>
+				<a title="Fresh page">
+					<div class="clearButton" onclick="deletePressed();">
+					</div>
+				</a>
+				<a title="Undo">
+					<div class="undoButton" onclick="undoPressed();">
+					</div>
+				</a>
+				<div id="inputLength">Source: 0</div>
+				<div class="clearboth"></div>
+			</div>
+			<div id="sourceFieldecske" data-step="2" data-intro="Edit the HTML source here." data-position='left'></div>
+			<script>
+				var sourceEditorFricc = CodeMirror(document.getElementById("sourceFieldecske"), {
+					value: "",
+					lineNumbers: true,
+					styleActiveLine: true,
+					mode: "text/html",
+					lineWrapping: true,
+					matchTags: {bothTags: true},
+					autoCloseTags: true
+				  });		
+				sourceEditorFricc.on("change", function() {
+					inputChanged();
+				  });
+			</script>
+			<div id="warningAboveSource">
+				<div id="warningAboveSourceText">
+					Get the hell outta here!
+				</div>
+			</div>
+		</div>
+		<div class="szekcio4">
+			<div class="wrap">
+				<div id="bottomNotification">
+					<div id="bottomNotificationMiddle">
+						<div class="adBanner">This website is using Cookies.</div>
+					</div> 
+				</div>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Blue responsive -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-9728962508602593"
+					 data-ad-slot="4757084866"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<a class="subscribeNow" href="https://htmlg.com/license/">
+				Become even more productive with the Pro&nbsp;HTML&nbsp;Editor
+			</a>
+			<ul class="benefits">
+				<li>No ads and limitations</li>
+				<li>Save your settings</li>
+				<li>More features:
+					<ul>
+						<li>Custom CSS</li>
+						<li>Auxiliary editor</li>
+						<li>Tag manager</li>
+						<li>Tag and tag attribute filters</li>
+					</ul>
+				</li>
+			</ul>
+			<a class="subscribeNow" href="https://htmlg.com/license/">
+				<img src="/editor/images/htmlg-icon.png" alt="pro" />
+			</a>
+		</div>
+		<div class="klirfix">
+		</div>			
+		<div id="lipszuTextarea">
+		</div>		
+		<div class="overlayContainer">
+			<div class="overlayer">
+			</div>
+			<div class="settingsList">
+				<div id="optionButton0" onclick="clickedOption(0);">Cleaning options</div>
+				<div id="optionButton1" onclick="clickedOption(1);">Clear inline styles</div>
+				<div id="optionButton3" onclick="clickedOption(3);">Clear classes and IDs</div>
+				<div id="optionButton16" onclick="clickedOption(16);">Character encoding</div>
+				<div id="optionButton13" onclick="clickedOption(13);">Clear comments</div>
+				<div id="optionButton10" onclick="clickedOption(10);">Clear span tags</div>
+				<div id="optionButton2" onclick="clickedOption(2);">Clear successive &amp;nbsp;s</div>
+				<div id="optionButton6" onclick="clickedOption(6);">Clear tags with one &amp;nbsp;</div>
+				<div id="optionButton5" onclick="clickedOption(5);">Clear empty tags</div>
+				<div id="optionButton15" onclick="clickedOption(15);">Clear tag attributes</div>			
+				<div id="optionButton12" onclick="clickedOption(12);">Clear all tags</div>
+				<div id="optionButton11" onclick="clickedOption(11);">Clear images</div>
+				<div id="optionButton9" onclick="clickedOption(9);">Clear links</div>
+				<div id="optionButton7" onclick="clickedOption(7);">Clear tables  </div>
+				<div id="optionButton8" onclick="clickedOption(8);">Convert tables to &lt;div&gt;s&nbsp;&nbsp;</div>
+				<div id="optionButton14" onclick="clickedOption(14);">Organize tree-view</div>
+				<div id="optionButton4" onclick="clickedOption(4);">Convert &lt;b&gt; to &lt;strong&gt;, &lt;i&gt; to &lt;em&gt;</div>
+				<p><a class="buttonka settingsDefault">Default</a> <a class="buttonka settingsOk">Close</a> <a class="buttonka settingsClean performCleaning">Clean</a></p>
+			</div>
+			<div class="colorPicker">
+				<div class="windowHeader">Color Picker</div>
+				<div class="windowContent">
+					<input class="color {pickerOnfocus:false, onImmediateChange:'updateColor();'}" id="myColor" onmousemove="document.getElementById('myColor').color.showPicker();" />
+					<div id="selectedbackgr">
+					</div>
+					<div id="colorToUse">
+					</div>
+					<div id="savedCodes" class="clearfix">
+					</div>
+					<div id="openColorLink" class="buttonkak">
+						<a class="buttonka" href="#" target="_blank">Color Mixer</a>
+					</div>				
+				</div>
+			</div>
+			<div class="lipsumText">
+				<div class="windowHeader">
+					Gibberish text generator
+				</div>
+				<div class="lipsumItself">
+					<form name="szettingform">
+						Number of paragraphs: 
+						<select name="hanyparagrafuslegyen">
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="5" selected="selected">5</option>
+						  <option value="10">10</option>
+						  <option value="15">15</option>
+						  <option value="20">20</option>
+						</select>
+						<br />Populate: 
+						<select name="mitpupulaljon">
+						  <option value="1" selected="selected">the editor</option>
+						  <option value="2">page</option>
+						</select>
+					</form>
+					
+					<a class="buttonka" onclick="generateLipsum();">Generate</a>
+				</div>
+			</div>
+			<div class="replaceList">
+				<div class="windowHeader">Find and replace in HTML source</div>
+				<div id="replace1" class="replaceText">
+					<div>Find: <input name="replacetext1" id="replacetext1" /></div>
+					<div>Replace with: <input name="replacewith1" id="replacewith1" /></div>
+					<a onclick="deleteRepField(1);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace2" class="replaceText">
+					<div>Find: <input name="replacetext2" id="replacetext2" /></div>
+					<div>Replace with: <input name="replacewith2" id="replacewith2" /></div>
+					<a onclick="deleteRepField(2);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace3" class="replaceText">
+					<div>Find: <input name="replacetext3" id="replacetext3" /></div>
+					<div>Replace with: <input name="replacewith3" id="replacewith3" /></div>
+					<a onclick="deleteRepField(3);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace4" class="replaceText">
+					<div>Find: <input name="replacetext4" id="replacetext4" /></div>
+					<div>Replace with: <input name="replacewith4" id="replacewith4" /></div>
+					<a onclick="deleteRepField(4);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace5" class="replaceText">
+					<div>Find: <input name="replacetext5" id="replacetext5" /></div>
+					<div>Replace with: <input name="replacewith5" id="replacewith5" /></div>
+					<a onclick="deleteRepField(5);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace6" class="replaceText">
+					<div>Find: <input name="replacetext6" id="replacetext6" /></div>
+					<div>Replace with: <input name="replacewith6" id="replacewith6" /></div>
+					<a onclick="deleteRepField(6);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace7" class="replaceText">
+					<div>Find: <input name="replacetext7" id="replacetext7" /></div>
+					<div>Replace with: <input name="replacewith7" id="replacewith7" /></div>
+					<a onclick="deleteRepField(7);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace8" class="replaceText">
+					<div>Find: <input name="replacetext8" id="replacetext8" /></div>
+					<div>Replace with: <input name="replacewith8" id="replacewith8" /></div>
+					<a onclick="deleteRepField(8);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace9" class="replaceText">
+					<div>Find: <input name="replacetext9" id="replacetext9" /></div>
+					<div>Replace with: <input name="replacewith9" id="replacewith9" /></div>
+					<a onclick="deleteRepField(9);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace10" class="replaceText">
+					<div>Find: <input name="replacetext10" id="replacetext10" /></div>
+					<div>Replace with: <input name="replacewith10" id="replacewith10" /></div>
+					<a onclick="deleteRepField(10);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace11" class="replaceText">
+					<div>Find: <input name="replacetext11" id="replacetext11" /></div>
+					<div>Replace with: <input name="replacewith11" id="replacewith11" /></div>
+					<a onclick="deleteRepField(11);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+				<div id="replace12" class="replaceText">
+					<div>Find: <input name="replacetext12" id="replacetext12" /></div>
+					<div>Replace with: <input name="replacewith12" id="replacewith12" /></div>
+					<a onclick="deleteRepField(12);" title="Delete this find and replace field"><div class="deleteField"></div></a>
+				</div>
+
+				<a onclick="addRepField();" title="Add new field"><div class="addNewField"></div></a>
+				<div class="clearboth">
+				</div>
+				<a title="Find and Replace now" id="findreplacenow" class="buttonka">Replace Now</a>
+			</div>
+		</div>
+		<div class="mainArticle" itemscope itemtype="https://schema.org/CreativeWork">
+			<a class="subscribeNow" href="https://htmlg.com/license/">
+				Purchase The Pro HTML Editor License! &nbsp;&nbsp;&nbsp;&nbsp; <img src="/editor/images/htmlg-icon.png" alt="pro" />
+			</a>
+			<article>
+				<h1>Online HTML Editor</h1>
+				<p><strong>The best real-time online HTML editor software kit with dynamic instant live visual preview and inline WYSIWYG editor using CKEditor and markup clean-up feature. Includes a HTML viewer, editor, compressor, beautifier and easy formatter. It's impossible to create invalid code with this tool.</strong></p>
+				<h2>How To Use The HTML Editor?</h2>
+				<p>The operation of this <a href="https://htmlg.com/html-editor/" target="_blank">HTML editor</a> with built-in <a href="https://html-cleaner.com" target="_blank">HTML Cleaner</a> is very intuitive and it's working in your browser without installing any additional program. Compose your text using the <abbr title="What You See Is What You Get">WYSIWYG</abbr> editor on the left and adjust formatting of the source code on the right. To convert Microsoft Word, PDF or any other rich-text documents to HTML, simply paste it in the visual editor. Perform bulk operations on the HTML code by clicking the Clean button after adjusting the settings.</p>
+				<p><a href="/" title="Online HTML Editor"><img src="/editor/images/html-editor.png" class="imageright" alt="best html editor"/></a>Before you start composing the content for a live website I advise you to experiment <a href="/#features">with&nbsp;the&nbsp;features</a> populating the work area with a demo text clicking the <strong>Quick Tour</strong> menu item.</p>
+				<p>The visual editor works like a regular text composer program, just use the commands above the text area to adjust the content and in the meantime you'll notice the source editor changing with it. If you're familiar with HTML code composing then you can adjust the code on the right.</p>
+				<h2>What Can You Do With This Online WYSIWYG Editor</h2>
+				<p>The control panel above the HTML source editor lists the most important commands:</p>
+				<div class="tutorialcontainer">
+					<div>
+						<div class="tutorial tut1"></div> &ndash; Revert the text back to the state before the cleaning or execution of any other major event. The visual editor has its own Undo button.
+					</div>
+					<div>
+						<div class="tutorial tut2"></div> &ndash; The fresh page command starts a new document. The same feature is listed below File / New document.
+					</div>
+					<div>
+						<div class="tutorial tut4"></div> &ndash; Deleting the new lines from the HTML code you can compress the source code. 
+					</div>
+					<div>
+						<div class="tutorial tut5"></div> &ndash; Define replacement rules and execute them. Use the plus button to define new rules and the recycle bin to remove one.
+					</div>
+					<div>
+						<div class="tutorial tut6"></div> &ndash; Fill the page with meaningless writing to fill gaps or experiment with the layout.
+					</div>
+					<div>
+						<div class="tutorial tut7"></div> &ndash; Pick a color from the palette and use them with the easy Click and Copy feature. Save the active colors for later use or use the <a href="https://rgbcolorcode.com/" target="_blank">advanced color mixer by RGBColorCode.com</a>
+					</div>
+					<div>
+						<div class="tutorial tut11"></div> &ndash; Activate automatic scroll. The two editors will scroll together when this option is enabled.
+					</div>
+					<div>
+						<div class="tutorial tut9"></div> &ndash; Adjust the font size according to your preferences.
+					</div>
+					<div>
+						<div class="tutorial tut8"></div> &ndash; Set up the cleaning options here. Your settings will not be lost when you leave the website. Click the header to select/disable all options.
+					</div>
+					<div>
+						<div class="tutorial tut10">Clean</div> &ndash; Execute all options that are checked in the settings (see gear icon above).
+					</div>
+				</div>
+				<h3>Other important editing features</h3>
+				<p>You can try these HTML editor features to practice and to maximize your coding efficiency.</p>
+				<ul>
+					<li><strong>Document converter</strong> &ndash; To convert any visual document like Excel, PDF, <a href="https://wordhtml.com/" target="_blank">Word to HTML</a> just paste the doc in the visual editor and the markup will show up instantly on the right. </li>
+					<li><strong>Online text editor</strong> &ndash; Compose documents, just like in a rich text editor. Use the control panel to include images, tables, headings, lists and other items to your paper.</li>
+					<li><strong>Copy - paste</strong> &ndash; The editor won't allow you to save the documents. For this you have to copy your generated code into a blank text file, change its extension to <em>.html</em> and open it in a <a href="https://www.google.com/chrome/index.html" target="_blank">web browser</a>.</li>
+					<li><strong>Work with tables</strong> &ndash; Using the WYSIWYG editor panel you can create a table of any dimmension in only 2 clicks. There's a cleaning option to convert them to styled DIV tags.</li>
+					<li><strong>Undo</strong> &ndash; Both editors have this function which allows to revert back the document to a previous state, ie. before the cleaning has been performed.</li>
+					<li><strong>Interactive demo</strong> &ndash; Take a 4-step tour going through the features clicking the <em>Quick Tour</em> menu item. Learn how to use the redactor and experiment with the demo text. </li>
+				</ul>
+				<h2>Never forget:</h2>
+				<ul>
+					<li>Have a backup before using this tool to make sure you can always revert back to your original document.</li>
+					<li>Always check your code before publishing on a live website. </li>
+					<li>This editor never saves or sends out your document, all operations are performed on your local computer.</li>
+					<li>Like most websites, this one uses cookies. </li>
+				</ul>
+				<h2>Div Table Styling</h2>
+				<p>Make sure you apply the CSS code below when you publish <a href="https://html-cleaner.com/features/replace-html-table-tags-with-divs/" target="_blank">tables converted to div elements.</a> Try the interactive online <a href="https://divtable.com/table-styler/" target="_blank">table styler</a> which can generate grids from both div and table elements. These are both supported by this editor. </p>
+				<p><em>Please note that the class names used by us are slightly different than the ones used by DivTable.com.</em></p>
+				<pre class="cssTableInclude"><span style="font-style:italic">.rTable</span> { <span style="color:#6d79de;font-weight:700">display</span>: table; <span style="color:#6d79de;font-weight:700">width</span>: <span style="color:#0000cd">100<span style="color:#00f;font-weight:700">%</span></span>;}
+				<span style="font-style:italic">.rTableRow</span> { <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-row</span>; }
+				<span style="font-style:italic">.rTableHeading</span> { <span style="color:#6d79de;font-weight:700">background-color</span>: <span style="color:#c5060b;font-weight:700">#ddd</span>; <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-header-group</span>; }
+				<span style="font-style:italic">.rTableCell</span>, <span style="font-style:italic">.rTableHead</span> { <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-cell</span>; <span style="color:#6d79de;font-weight:700">padding</span>: <span style="color:#0000cd">3<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#0000cd">10<span style="color:#00f;font-weight:700">px</span></span>; <span style="color:#6d79de;font-weight:700">border</span>: <span style="color:#0000cd">1<span style="color:#00f;font-weight:700">px</span></span> <span style="color:#06960e;font-weight:700">solid</span> <span style="color:#c5060b;font-weight:700">#999999</span>; }
+				<span style="font-style:italic">.rTableHeading</span> { <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-header-group</span>; <span style="color:#6d79de;font-weight:700">background-color</span>: <span style="color:#c5060b;font-weight:700">#ddd</span>; <span style="color:#6d79de;font-weight:700">font-weight</span>: <span style="color:#06960e;font-weight:700">bold</span>; }
+				<span style="font-style:italic">.rTableFoot</span> { <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-footer-group</span>; <span style="color:#6d79de;font-weight:700">font-weight</span>: <span style="color:#06960e;font-weight:700">bold</span>; <span style="color:#6d79de;font-weight:700">background-color</span>: <span style="color:#c5060b;font-weight:700">#ddd</span>; }
+				<span style="font-style:italic">.rTableBody</span> { <span style="color:#6d79de;font-weight:700">display</span>: <span style="color:#06960e;font-weight:700">table-row-group</span>; }
+				</pre>
+				<p>Click and copy the code from the field below:
+				<textarea name='csstablecode' id="csstablecode" onclick="this.select()">	.rTable { display: table; width: 100%;} 
+	.rTableRow { display: table-row; }
+	.rTableHeading { background-color: #ddd; display: table-header-group; }
+	.rTableCell, .rTableHead { display: table-cell; padding: 3px 10px; border: 1px solid #999999; }
+	.rTableHeading { display: table-header-group; background-color: #ddd; font-weight: bold; }
+	.rTableFoot { display: table-footer-group; font-weight: bold; background-color: #ddd; }
+	.rTableBody { display: table-row-group; }</textarea></p>
+				<p><strong>You can use this website absolutely free but by using this tool you accept to link to this website or our partner sites. If you don't want this, please <a href="https://htmlg.com/license/">subscribe for a pro HTMLG license</a> and you get even more HTML editing features.</strong></p>
+				<p>Please send us an email to <img style="vertical-align: bottom;" src="/editor/images/contact-address.png" alt="html online editor contact" /> if you have any suggestion or you just want to say hello. </p>
+				<div class="clearboth">
+				</div>
+				<div class="addThisButts">
+					<div class="addthisButtons">
+						<ul>
+							<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://html-online.com" target="_blank"><img src="https://html-online.com/img/social/fb.svg" alt="Facebook" /></a></li>
+							<li><a href="https://twitter.com/home?status=https://html-online.com" target="_blank"><img src="https://html-online.com/img/social/twitt.svg" alt="Twitter" /></a></li>
+							<li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://html-online.com&amp;title=HTML%20Onliner&amp;summary=Convert%20your%20dirty%20code%20to%20a%20organized%20HTML%20source%20with%20this%20free%20online%20tool&amp;source=" target="_blank"><img src="https://html-online.com/img/social/linkedin.svg" alt="Linkedin" /></a></li>
+							<li><a href="https://pinterest.com/pin/create/button/?url=https://html-online.com/img/online-html-editor.jpg&amp;media=HTML%20Online&amp;description=Convert%20your%20dirty%20code%20to%20an%20organized%20HTML%20source%20with%20this%20free%20online%20tool" target="_blank"><img src="https://html-online.com/img/social/pinterest.svg" alt="Pinteres" /></a></li>
+							<li><a href="mailto:?Subject=Online%20HTML%20Editor&amp;Body=Hi%21%0ACheck%20out%20the%20online%20HTML%20code%20editor:%20https://html-online.com"><img src="https://html-online.com/img/social/mail.svg" alt="Mailt to a friend" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		</div>			
+		<div class="clearboth">
+		</div>
+		<footer>
+			<div class="footerDiv">
+				<span>We use cookies on this website to provide a better user experience. You can adjust your browser settings or stop using this website if you do not agree.</span><br />
+				<a href="/privacy-terms-and-conditions/">Privacy, Terms &amp; Conditions</a> &nbsp;&nbsp;|&nbsp;&nbsp; &copy; htmlg, HTML-Online.com
+			</div>
+		</footer>
+	</div>
+	<div id="ctaContent">
+	</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64238923-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

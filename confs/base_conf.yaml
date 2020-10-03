@@ -1,0 +1,75 @@
+################################################################################
+# Configuration file for Tableau archiver project. Note that most of the configurations
+# can be overridden from command line
+################################################################################
+
+################################################################################
+# Logging settings
+################################################################################
+log:
+    level: DEBUG
+    path: './log/tableau_archiver.log'
+
+
+################################################################################
+# Configurations for the general archiver functionality
+################################################################################
+archiver:
+    export_dir: ./export #Directory to store Archived WB / DS details.
+    archive_dir: ./output #Directory to store archive Daatasource /workbook based on timestamp.
+    days: 15 # file order then number of days will  be deleted.
+    issendemail: false #enable(true) /  disable(false) sending email.Delete must be enabled as well.
+    isdeletefiles: false #enable(true) /  disable(false) deleting file.
+    isdownloadfiles: true #enable(true) /  disable(false) downloading file.
+    isdeletearchive: true #enable(true) /  disable(false) deletion of archived file on your local system.
+
+    archiving_email_path:
+        subject: Tableau Content Archival Notification
+        body: ./templates/workbook_email_template.html
+    archiving_email_template:
+        subject: Tableau Content Archival Notification
+        body: ./templates/workbook_email_template.html
+
+    email_server: mail.internal.salesforce.com
+    email_cc_list: [raghavender.allam@salesforce.com]
+    email_from: no-reply@salesforce.com
+
+################################################################################
+# Configuration for the selector module which selects the workbooks to be archived
+#
+# The query must return the following fields for the workbooks
+#    "site_id"
+#    "site_name"
+#    "site_luid"
+#    "project_name"
+#    "project_luid"
+#    "document_name"
+#    "document_luid"
+#    "size"
+#    "type"
+#    "repo_url"
+#    "user_name"
+#    "user_email"
+#    "inactive_days"
+################################################################################
+
+tab_select: #Postgress details.
+    pg_username: readonly #Username
+    pg_password: xxxxxxxx #Password
+    pg_dbname: workgroup  #Database name.
+    pg_port: 8060 #postgress Posrt
+    pg_host: orb-mstab-wds01 #postgress host.
+
+
+
+
+    wb_query_path: ./confs/workbook_archive.sql #Path for workbook SQL query.
+    ds_query_path: ./confs/datasource_archive.sql #Path for Datasource SQL query.
+
+################################################################################
+# Configurations for the interface with Tableau (currently only REST)
+################################################################################
+tab_interface:
+    tab_username: svc_mstableau_dev #API username.
+    tab_password: xxxxxxxx #API password.
+    tab_host: mstableau.ssdev.sfdcbt.net #API host.
