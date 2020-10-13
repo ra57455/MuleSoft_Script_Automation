@@ -21,6 +21,7 @@ class Selector(object):
                   "type",
                   "repo_url",
                   "user_name",
+                  "friendly_name",
                   "user_email",
                   "inactive_days",
                   ]

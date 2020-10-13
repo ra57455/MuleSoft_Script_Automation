@@ -184,7 +184,7 @@ class ContentArchiver(object):
                             self.logger.debug("Got content of %s, compressed? %s", fn, compressed)
                             extracted_files = self.extract_store(content, compressed, doc['site_name'],
                                                                  doc['project_name'], fn) #Get data and store in file.
-
+                            wb_deleted_list.append((doc, extracted_files))
 
                         else:
                             self.logger.debug(
@@ -316,7 +316,7 @@ class ContentArchiver(object):
                 if extracted_files:
                     attached_files.extend(extracted_files)
             context = {
-                'user_name': user_name,
+                'user_name': wb['friendly_name'],
                 'documents': documents} #Dictionary of user details and content
             content = renderer.render(email_template['body'], context)
             self.logger.debug("Sending alert to user %s, email %s:\n%s\nattached files: %s", user_name, user_email,
