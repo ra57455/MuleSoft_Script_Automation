@@ -107,4 +107,3 @@ inactive_days > 120
         --((size >= 1000000000 and size <=2000000000) and inactive_days > 285) or
         --((size >= 2000000000 and size <=10000000000) and inactive_days > 180)
 --)
-limit 1
