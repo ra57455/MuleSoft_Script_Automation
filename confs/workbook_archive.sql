@@ -123,4 +123,3 @@ where
 --and
 --project_name not like 'External_%'
 order by site_name
-limit 1
