@@ -10,6 +10,7 @@ size,
 type,
 repo_url,
 user_name,
+friendly_name,
 user_email,
 inactive_days
 from
@@ -28,6 +29,7 @@ from
     a.size,
     a.type,
     a.user_name,
+    a.friendly_name,
     a.user_email,
     (
       case when (b.last_accessed) is null then ((now()::date) - a.ds_created_date::date)
@@ -51,6 +53,7 @@ from
       p.luid as project_luid,
       ds.data_engine_extracts as type,
       su.name as user_name,
+      su.friendly_name as friendly_name,
       su.email as user_email
       from datasources as ds left join
       (
@@ -104,3 +107,4 @@ inactive_days > 120
         --((size >= 1000000000 and size <=2000000000) and inactive_days > 285) or
         --((size >= 2000000000 and size <=10000000000) and inactive_days > 180)
 --)
+limit 1

@@ -10,6 +10,7 @@ size,
 type,
 repo_url,
 user_name,
+friendly_name,
 user_email,
 inactive_days
 from
@@ -28,6 +29,7 @@ from
   usage.proj_name as project_name,
   usage.proj_luid as project_luid,
   usage.user_name as user_name,
+  usage.friendly_name as friendly_name,
   usage.user_email as user_email,
   usage.days_inactive as inactive_days,
   size.id as work_rev_id,
@@ -50,6 +52,7 @@ from
     p.luid as proj_luid,
     su.name as user_name,
     su.email as user_email,
+    su.friendly_name as friendly_name,
     (
             case when max(summ.workbook_last_accessed_at) IS NULL then ((now()::date) - w.created_at::date)
             else (now()::date - max(summ.workbook_last_accessed_at)::date)
@@ -95,7 +98,7 @@ from
     join projects p on w.project_id=p.id
     join users u on u.id=w.owner_id
     join system_users su on u.system_user_id=su.id
-    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
     order by days_inactive
   ) as usage
   join
@@ -120,3 +123,4 @@ where
 --and
 --project_name not like 'External_%'
 order by site_name
+limit 1
